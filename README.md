@@ -42,6 +42,6 @@ Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e con
 ## Contatos:
 <div>
 <a href="https://instagram.com/luizfelipesantos.tn" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-<a href = "lokateu.fs@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href = "[lokateu.fs@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwfbFHbjwLHCsbfFrdSfjQBTMDgXmVBkWrXVJcXFfVBmkjmVXdHSKVwHnJdMrmvnVxFwJB)"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/seu-usuário-linkedln-aqui" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
 </div>
