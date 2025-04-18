@@ -20,7 +20,7 @@
 - Expo
 
 - JavaScript
-- 
+  
 <h2>📷 Screenshots</h2>
 
 <img src="https://github.com/user-attachments/assets/6f495cbd-b330-4fa9-b6b1-174e5482139b" width="250"/>  
