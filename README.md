@@ -1,9 +1,9 @@
 # Olá, me chamo Luiz Felipe. 
 
-🔐 Gerador de Senhas - App Mobile
-Este é um aplicativo mobile desenvolvido em React Native com Expo que permite gerar senhas seguras de forma rápida e prática!
+## 🔐 Gerador de Senhas - App Mobile
+## Este é um aplicativo mobile desenvolvido em React Native com Expo que permite gerar senhas seguras de forma rápida e prática!
 
-📱 Funcionalidades
+## 📱 Funcionalidades
 - Geração de senhas aleatórias e seguras
 
 - Escolha do tamanho da senha
@@ -14,14 +14,15 @@ Este é um aplicativo mobile desenvolvido em React Native com Expo que permite g
 
 - Interface simples e intuitiva
 
-🛠️ Tecnologias
+## 🛠️ Tecnologias
 - React Native
 
 - Expo
 
 - JavaScript
 - 
-📷 Screenshots
+## 📷 Screenshots
+
 ![Screenshot_2025-04-18-18-31-58-125_host exp exponent](https://github.com/user-attachments/assets/6f495cbd-b330-4fa9-b6b1-174e5482139b)
 
 
@@ -42,5 +43,5 @@ Este é um aplicativo mobile desenvolvido em React Native com Expo que permite g
 
 ![Screenshot_2025-04-18-18-32-03-513_host exp exponent](https://github.com/user-attachments/assets/d1e11153-9f58-4468-b311-114ff6c8e9de)
 
-📄 Licença
+## 📄 Licença
 Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e contribuir!
