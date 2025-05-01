@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Pressable, View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons"
+import AsyncStorage from "@react-native-async-storage/async-storage"
 
 
 export default function PasswordEditor({data, removePassword}) {
@@ -9,14 +10,33 @@ export default function PasswordEditor({data, removePassword}) {
     const[senhaVizivel, setSenhaVizivel] = useState(true)
     const[animacaoOlho, setAnimacaoOlho] = useState("eye")
 
-    function vizibilidade(){
-        if(senhaVizivel){
-            setAnimacaoOlho("eye-off-outline")
-            setSenhaVizivel(false)
-        } else {
-            setAnimacaoOlho("eye")
-            setSenhaVizivel(true)
-        }   
+    useEffect(() => {
+         const carregarEstado = async() => {
+            try {
+                const valorSalvo = await AsyncStorage.setItem("senhaVizivel")
+                
+                if(valorSalvo != null){
+                    const estadoBoleano = valorSalvo === "true";
+                    setSenhaVizivel(estadoBoleano)	
+                    setAnimacaoOlho(estadoBoleano ? "eye" : "eye-off-outline")
+                }
+            } catch (error) {
+                console.log("Erro ao carregar Estado ", error)
+            }
+        }
+
+        carregarEstado()
+    }, [])
+
+    async function vizibilidade(){
+        try {
+            const novoEstado = !senhaVizivel;
+            setSenhaVizivel(novoEstado)
+            setAnimacaoOlho(novoEstado ? "eye" : "eye-off-outline")
+            await AsyncStorage.setItem("senhaVizivel", novoEstado.toString())
+        } catch (error) {
+            console.log("Erro ao salvar estado ", error)
+        }  
     }
 
     return (

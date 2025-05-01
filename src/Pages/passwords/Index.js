@@ -15,7 +15,7 @@ export function MinhasSenhas(){
 
     useEffect(() => {
 
-        async function load(passwords) {
+        async function load() {
             const senhas = await getItem("@pass")
             setListaDeSenhas(senhas)
         }

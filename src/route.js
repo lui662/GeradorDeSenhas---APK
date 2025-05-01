@@ -9,35 +9,35 @@ const Tab = createBottomTabNavigator()
 function Routes(){
     return(
         <Tab.Navigator>
-        <Tab.Screen 
-        name="Home"
-        component={HomeScrean}
-        options={{
-            headerShown: false,
-            tabBarIcon: ({focused, color, size}) => {
-                if(focused){
-                    return<Ionicons size={size} color={color} name="home-sharp"/>
-                }
+            <Tab.Screen 
+                name="Home"
+                component={HomeScrean}
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({focused, color, size}) => {
+                        if(focused){
+                            return<Ionicons size={size} color={color} name="home-sharp"/>
+                        }
 
-                return<Ionicons size={size} color={color} name="home-outline"/>
-            }
-        }}
-        />
+                        return<Ionicons size={size} color={color} name="home-outline"/>
+                    }
+                }}
+            />
             
-        <Tab.Screen 
-        name="Password" 
-        component={MinhasSenhas}
-        options={{
-            headerShown: false,
-            tabBarIcon: ({focused, color, size}) => {
-                if(focused){
-                    return<Ionicons size={size} color={color} name="lock-closed"/>
-                }
+            <Tab.Screen 
+                name="Password" 
+                component={MinhasSenhas}
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({focused, color, size}) => {
+                        if(focused){
+                            return<Ionicons size={size} color={color} name="lock-closed"/>
+                        }
 
-                return<Ionicons size={size} color={color} name="lock-closed-outline"/>
-            }
-        }}
-        />
+                        return<Ionicons size={size} color={color} name="lock-closed-outline"/>
+                    }
+                }}
+            />
         </Tab.Navigator>
     )
 }

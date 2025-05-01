@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { Text, View, TouchableOpacity, Pressable, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import UseStorage from "../../../../hook/UseStorage";
-
+import { Ionicons } from "@expo/vector-icons"
+import * as ClipBoard from "expo-clipboard"
 
 const EscluirSenha = ({mostrarSenha, fecharModal, setListaDeSenha}) =>{
     const useStorage = UseStorage();
@@ -15,9 +16,21 @@ const EscluirSenha = ({mostrarSenha, fecharModal, setListaDeSenha}) =>{
         fecharModal()
     }
 
+    async function copiarSenha (){
+            await ClipBoard.setStringAsync(mostrarSenha)
+            alert("Senha copiada com sucesso com sucesso")
+            fecharModal()
+        }
+
+
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.areaModal} >
+                <View style={styles.containerSairStyle}>
+                    <Pressable onPress={fecharModal}>
+                        <Ionicons name="close-circle-sharp" color={"red"} size={30}/>
+                    </Pressable>
+                </View>
                 <Text style={styles.tituloModal}>
                     Deseja Escluir essa senha?
                 </Text>
@@ -27,8 +40,8 @@ const EscluirSenha = ({mostrarSenha, fecharModal, setListaDeSenha}) =>{
                     </Text>
                 </Pressable>
                 <View style={styles.containerBotoes}>
-                    <TouchableOpacity onPress={fecharModal} style={[styles.botoes, styles.botaoSalvar]}>
-                        <Text style={styles.textBotaoStyle}>Sair</Text>
+                    <TouchableOpacity onPress={copiarSenha} style={[styles.botoes, styles.botaoSalvar]}>
+                        <Text style={styles.textBotaoStyle}>Copiar</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={excluirSenha} style={[styles.botoes, styles.botaoSair]}>
                         <Text style={styles.textBotaoStyle}>Deletar</Text>
@@ -100,5 +113,11 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         color: "white"
     },
+    containerSairStyle: {
+        alignItems: "flex-end",
+        width: "80%",
+        height: "auto",
+        marginBottom: 5, 
+    }
 
 })
